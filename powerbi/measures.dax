@@ -1,0 +1,232 @@
+// Measures for the Semiconductor Market Opportunity dashboard.
+//
+// Paste each block into Power BI Desktop as a new measure (Modeling > New measure). Names are
+// used verbatim by DASHBOARD_BUILD_GUIDE.md, so keep them exactly as written.
+//
+// Model assumptions these measures rely on:
+//   - dim_year[year] is a whole number, not a date. There is no calendar, so no time
+//     intelligence function is used; prior-year lookups are explicit filters on the integer.
+//   - dim_segment and dim_year filter all three fact tables in a single direction.
+//   - bridge_factor_contribution is the unpivoted contribution table built in Power Query.
+//
+// -------------------------------------------------------------------------------------------
+// Market size
+// -------------------------------------------------------------------------------------------
+
+Total TAM (USD bn) =
+SUM ( fact_segment_year[market_size_usd_bn] )
+
+// The headline number for the executive page. A design-services firm cannot sell into TAM, so
+// this, not TAM, is what every size visual should lead with.
+Total Serviceable Market (USD bn) =
+SUM ( fact_segment_year[serviceable_market_usd_bn] )
+
+Unreachable Market (USD bn) =
+[Total TAM (USD bn)] - [Total Serviceable Market (USD bn)]
+
+Addressable Share % =
+DIVIDE ( [Total Serviceable Market (USD bn)], [Total TAM (USD bn)] )
+
+// Serviceable-market weighted, so a large slow segment is not averaged down by a tiny fast one.
+Weighted Avg CAGR % =
+DIVIDE (
+    SUMX (
+        fact_segment_year,
+        fact_segment_year[cagr_pct] * fact_segment_year[serviceable_market_usd_bn]
+    ),
+    SUM ( fact_segment_year[serviceable_market_usd_bn] )
+) / 100
+
+// -------------------------------------------------------------------------------------------
+// Growth
+// -------------------------------------------------------------------------------------------
+
+Serviceable Market YoY % =
+VAR CurrentYear = SELECTEDVALUE ( dim_year[year] )
+VAR PriorValue =
+    CALCULATE (
+        [Total Serviceable Market (USD bn)],
+        REMOVEFILTERS ( dim_year ),
+        dim_year[year] = CurrentYear - 1
+    )
+RETURN
+    DIVIDE ( [Total Serviceable Market (USD bn)] - PriorValue, PriorValue )
+
+TAM YoY % =
+VAR CurrentYear = SELECTEDVALUE ( dim_year[year] )
+VAR PriorValue =
+    CALCULATE (
+        [Total TAM (USD bn)],
+        REMOVEFILTERS ( dim_year ),
+        dim_year[year] = CurrentYear - 1
+    )
+RETURN
+    DIVIDE ( [Total TAM (USD bn)] - PriorValue, PriorValue )
+
+// -------------------------------------------------------------------------------------------
+// Opportunity score
+// -------------------------------------------------------------------------------------------
+
+// At segment-year grain there is exactly one row, so AVERAGE returns that row's score. It is
+// written as an aggregation so the measure still evaluates when several years are in context.
+Opportunity Score =
+AVERAGE ( fact_opportunity_score[opportunity_score] )
+
+// A portfolio-level score. Averaging raw scores across segments would let a tiny segment count
+// as much as a large one; weighting by serviceable market states the score of the pool.
+Weighted Opportunity Score =
+VAR Grain =
+    ADDCOLUMNS (
+        SUMMARIZE ( fact_opportunity_score, dim_segment[segment_id], dim_year[year] ),
+        "@Score", [Opportunity Score],
+        "@Serviceable", [Total Serviceable Market (USD bn)]
+    )
+RETURN
+    DIVIDE (
+        SUMX ( Grain, [@Score] * [@Serviceable] ),
+        SUMX ( Grain, [@Serviceable] )
+    )
+
+Rank by Opportunity =
+IF (
+    NOT ISBLANK ( [Opportunity Score] ),
+    RANKX (
+        ALLSELECTED ( dim_segment[segment_name] ),
+        [Opportunity Score],
+        ,
+        DESC,
+        DENSE
+    )
+)
+
+Score Delta vs Prior Year =
+VAR CurrentYear = SELECTEDVALUE ( dim_year[year] )
+VAR PriorValue =
+    CALCULATE (
+        [Opportunity Score],
+        REMOVEFILTERS ( dim_year ),
+        dim_year[year] = CurrentYear - 1
+    )
+RETURN
+    IF ( NOT ISBLANK ( PriorValue ), [Opportunity Score] - PriorValue )
+
+// KPI card. Named so the executive page can say which segment moved most without the reader
+// having to scan a line chart for it.
+Largest Score Mover =
+VAR Movers =
+    ADDCOLUMNS (
+        ALLSELECTED ( dim_segment[segment_name] ),
+        "@Delta", [Score Delta vs Prior Year]
+    )
+VAR Movable = FILTER ( Movers, NOT ISBLANK ( [@Delta] ) )
+VAR Biggest = TOPN ( 1, Movable, ABS ( [@Delta] ), DESC )
+RETURN
+    CONCATENATEX (
+        Biggest,
+        dim_segment[segment_name] & " (" & FORMAT ( [@Delta], "+0.0;-0.0" ) & " pts)",
+        ", "
+    )
+
+Highest-Scoring Segment =
+VAR Scored =
+    ADDCOLUMNS ( ALLSELECTED ( dim_segment[segment_name] ), "@Score", [Opportunity Score] )
+VAR Best = TOPN ( 1, FILTER ( Scored, NOT ISBLANK ( [@Score] ) ), [@Score], DESC )
+RETURN
+    CONCATENATEX (
+        Best,
+        dim_segment[segment_name] & " (" & FORMAT ( [@Score], "0.0" ) & ")",
+        ", "
+    )
+
+// -------------------------------------------------------------------------------------------
+// Factor decomposition (page 2)
+// -------------------------------------------------------------------------------------------
+
+Factor Contribution =
+SUM ( bridge_factor_contribution[contribution] )
+
+Factor Contribution Share % =
+DIVIDE (
+    [Factor Contribution],
+    CALCULATE ( [Factor Contribution], REMOVEFILTERS ( bridge_factor_contribution[factor] ) )
+)
+
+// -------------------------------------------------------------------------------------------
+// Sensitivity (page 2 and page 3)
+// -------------------------------------------------------------------------------------------
+
+Rank Under Selected Profile =
+CALCULATE (
+    MIN ( fact_sensitivity[rank_in_year] ),
+    KEEPFILTERS ( fact_sensitivity[is_base_profile] IN { 0, 1 } )
+)
+
+House View Rank =
+CALCULATE (
+    MIN ( fact_sensitivity[rank_in_year] ),
+    REMOVEFILTERS ( dim_profile ),
+    fact_sensitivity[is_base_profile] = 1
+)
+
+// The number the recommendation has to survive. Zero means the position is a property of the
+// data; two or more means it is a property of the weights we chose.
+Max Rank Swing vs House View =
+CALCULATE (
+    MAXX (
+        FILTER ( fact_sensitivity, fact_sensitivity[is_base_profile] = 0 ),
+        ABS ( fact_sensitivity[rank_shift] )
+    ),
+    REMOVEFILTERS ( dim_profile )
+)
+
+Rank Stability =
+VAR Swing = [Max Rank Swing vs House View]
+RETURN
+    SWITCH (
+        TRUE (),
+        ISBLANK ( Swing ), "",
+        Swing = 0, "Holds under every profile",
+        Swing = 1, "Moves one place",
+        "Weight-sensitive - argue on merits"
+    )
+
+// -------------------------------------------------------------------------------------------
+// Presentation
+// -------------------------------------------------------------------------------------------
+
+Dashboard Title =
+VAR YearLabel =
+    IF (
+        ISFILTERED ( dim_year[year] ),
+        CONCATENATEX ( VALUES ( dim_year[year] ), dim_year[year], ", ", dim_year[year], ASC ),
+        "2021-2030"
+    )
+VAR SegmentCount = COUNTROWS ( ALLSELECTED ( dim_segment[segment_id] ) )
+VAR SegmentLabel =
+    IF (
+        SegmentCount = 8,
+        "all 8 end-market segments",
+        SegmentCount & " of 8 end-market segments"
+    )
+RETURN
+    "Semiconductor design-services opportunity | " & SegmentLabel & " | " & YearLabel
+
+// Placed as a card at the foot of every page. The disclosure is a modelling obligation, so it
+// lives in the model rather than in a text box someone can delete from one page.
+Data Disclosure =
+"Illustrative dataset constructed to be directionally consistent with publicly reported industry estimates. Figures are for methodology demonstration and are not market research."
+
+// Drives conditional formatting by field value wherever the recommendation is shown.
+Recommendation Colour =
+SWITCH (
+    SELECTEDVALUE ( dim_segment[recommendation] ),
+    "Prioritize", "#1B6B45",
+    "Selective", "#B07A12",
+    "Deprioritize", "#9C3A3A",
+    "#7F7F7F"
+)
+
+// Crowding shading for the page 2 scatter. Red is a crowded segment, not a bad one - the
+// legend on the page must say so.
+Competitive Intensity =
+AVERAGE ( fact_segment_year[competitive_intensity] )
