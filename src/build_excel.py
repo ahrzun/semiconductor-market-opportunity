@@ -11,6 +11,7 @@ inverted, weighted sum, and bands applied to the mean score over the forward win
 
 from __future__ import annotations
 
+from datetime import datetime, timezone
 from pathlib import Path
 
 import pandas as pd
@@ -26,6 +27,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PROCESSED_DIR = ROOT / "data" / "processed"
 WEIGHTS_PATH = ROOT / "config" / "weights.yaml"
 OUTPUT_PATH = ROOT / "excel" / "opportunity_scoring.xlsx"
+FIXED_BUILD_TIME = datetime(1980, 1, 1, tzinfo=timezone.utc)
 
 DISCLOSURE = (
     "Illustrative dataset constructed to be directionally consistent with publicly reported "
@@ -488,6 +490,15 @@ def main() -> None:
         )
 
     workbook.active = workbook.index(ranking_sheet)
+
+    # openpyxl writes the current clock into docProps/core.xml, which would make every rebuild
+    # differ in content rather than only in zip metadata. Pin it to the same fixed instant the
+    # archive normalizer uses.
+    workbook.properties.creator = "Semiconductor market opportunity pipeline"
+    workbook.properties.lastModifiedBy = workbook.properties.creator
+    workbook.properties.created = FIXED_BUILD_TIME
+    workbook.properties.modified = FIXED_BUILD_TIME
+
     workbook.save(OUTPUT_PATH)
     normalize(OUTPUT_PATH)
     print(f"workbook: {OUTPUT_PATH} ({len(workbook.sheetnames)} sheets, {n_rows} modelled rows)")
