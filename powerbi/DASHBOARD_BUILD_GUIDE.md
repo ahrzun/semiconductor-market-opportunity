@@ -169,7 +169,7 @@ rounded corners.
 ### TAM versus serviceable market
 
 **Clustered bar chart**, X 20, Y 185, width 610, height 250. Title:
-*Between 75% and 96% of every segment's TAM is out of reach*.
+*Between 74% and 96% of every segment's TAM is out of reach*.
 
 - Y axis: `dim_segment[segment_name]`
 - X axis: `Total Serviceable Market (USD bn)`, then `Unreachable Market (USD bn)`
