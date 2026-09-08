@@ -1,0 +1,77 @@
+# Single source of truth for the opportunity scoring model.
+#
+# The Python scorer reads this file directly. build_excel.py writes these same values into
+# labelled input cells on the Scoring Model sheet and points every live formula at those cells,
+# so a weight can only ever be changed here or in the workbook's input block - never inline.
+#
+# Factor keys must match the normalized-column stems produced by src/score.py.
+
+base_profile: base
+
+# Factors whose raw value is bad when high. These are inverted after normalization
+# (100 - normalized) so that every weighted contribution reads "higher is better".
+inverted_factors:
+  - competitive_intensity
+
+# Recommendation bands, applied to the mean opportunity score over the forward window.
+# A single-year cut would let one noisy year decide a capacity commitment.
+forward_window:
+  start_year: 2026
+  end_year: 2030
+bands:
+  prioritize_min: 60.0
+  selective_min: 45.0
+
+profiles:
+  # House view. Size and growth carry equal top weight; addressability and fit together
+  # carry 30% because a services firm sells capability into a market, not the market itself.
+  base:
+    label: Base (house view)
+    description: Balanced view used for the headline ranking and the go/no-go recommendation.
+    weights:
+      serviceable_market_size: 0.20
+      cagr: 0.20
+      design_services_addressability: 0.15
+      strategic_fit: 0.15
+      customer_demand: 0.10
+      competitive_intensity: 0.10
+      entry_feasibility: 0.10
+
+  # Stress test 1: a board that wants to buy growth and will tolerate a hard entry.
+  growth_weighted:
+    label: Growth-weighted
+    description: CAGR dominates; crowding and feasibility are discounted.
+    weights:
+      serviceable_market_size: 0.20
+      cagr: 0.35
+      design_services_addressability: 0.10
+      strategic_fit: 0.10
+      customer_demand: 0.10
+      competitive_intensity: 0.05
+      entry_feasibility: 0.10
+
+  # Stress test 2: a capacity-constrained services firm that must win work this year.
+  feasibility_weighted:
+    label: Feasibility-weighted
+    description: Ease of entry and headroom against incumbents dominate.
+    weights:
+      serviceable_market_size: 0.10
+      cagr: 0.10
+      design_services_addressability: 0.15
+      strategic_fit: 0.10
+      customer_demand: 0.10
+      competitive_intensity: 0.15
+      entry_feasibility: 0.30
+
+  # Stress test 3: protect the existing ASIC / embedded / VLSI franchise.
+  fit_weighted:
+    label: Fit-weighted
+    description: Fit with current capability and addressability dominate.
+    weights:
+      serviceable_market_size: 0.10
+      cagr: 0.10
+      design_services_addressability: 0.20
+      strategic_fit: 0.35
+      customer_demand: 0.10
+      competitive_intensity: 0.05
+      entry_feasibility: 0.10

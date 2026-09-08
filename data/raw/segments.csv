@@ -1,0 +1,9 @@
+segment_id,segment_name,value_chain_stage,cycle_beta,analyst_note
+ANLG,Analog & mixed-signal,Analog / mixed-signal design,0.8,"Slowest growth, deepest fit; the volume base that funds capacity elsewhere."
+AUTO,Automotive & ADAS silicon,SoC / ASIC design,0.6,Long programme lengths and functional-safety work favour an embedded/VLSI services partner.
+HPC,HPC / AI accelerator ASICs,Custom ASIC design,1.2,Largest prize and the hardest entry; hyperscaler in-house teams absorb most of the work.
+MEM,Memory (DRAM / NAND),Captive IDM design,1.9,Headline TAM leader and the clearest trap: design stays captive inside three IDMs.
+MEMS,MEMS & sensors,Mixed-signal & sensor design,0.7,Easy to enter and easy to leave; short engagements make revenue hard to forecast.
+PHOT,Silicon photonics / optical interconnect,Photonic IC & packaging design,0.9,"Fastest compounding market in the set, but the thinnest talent pool in India."
+PWR,Power electronics (SiC / GaN),Device & module design,0.8,Growth is real; the margin pool crowds once announced SiC capacity converts to supply.
+RF5G,RF & 5G front-end,RF IC design,1.0,Mature handset demand; incremental infrastructure and satellite work only.
