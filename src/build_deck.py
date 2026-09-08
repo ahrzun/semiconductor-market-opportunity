@@ -19,6 +19,8 @@ from pptx.dml.color import RGBColor
 from pptx.enum.text import PP_ALIGN
 from pptx.util import Emu, Inches, Pt
 
+from zip_determinism import normalize
+
 ROOT = Path(__file__).resolve().parents[1]
 PROCESSED_DIR = ROOT / "data" / "processed"
 WEIGHTS_PATH = ROOT / "config" / "weights.yaml"
@@ -614,6 +616,7 @@ def main() -> None:
         builder(presentation, context)
 
     presentation.save(OUTPUT_PATH)
+    normalize(OUTPUT_PATH)
     print(f"deck: {OUTPUT_PATH} ({len(presentation.slides)} slides)")
 
 

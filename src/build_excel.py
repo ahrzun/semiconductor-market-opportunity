@@ -20,6 +20,8 @@ from openpyxl.styles import Alignment, Border, Font, PatternFill, Side
 from openpyxl.utils import get_column_letter
 from openpyxl.workbook.defined_name import DefinedName
 
+from zip_determinism import normalize
+
 ROOT = Path(__file__).resolve().parents[1]
 PROCESSED_DIR = ROOT / "data" / "processed"
 WEIGHTS_PATH = ROOT / "config" / "weights.yaml"
@@ -487,6 +489,7 @@ def main() -> None:
 
     workbook.active = workbook.index(ranking_sheet)
     workbook.save(OUTPUT_PATH)
+    normalize(OUTPUT_PATH)
     print(f"workbook: {OUTPUT_PATH} ({len(workbook.sheetnames)} sheets, {n_rows} modelled rows)")
 
 
