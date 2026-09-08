@@ -1,0 +1,9 @@
+segment_id,segment_name,value_chain_stage,cycle_beta,analyst_note,addressability_tier,forward_mean_score,recommendation
+ANLG,Analog & mixed-signal,Analog / mixed-signal design,0.8,"Slowest growth, deepest fit; the volume base that funds capacity elsewhere.",High,67.23,Prioritize
+AUTO,Automotive & ADAS silicon,SoC / ASIC design,0.6,Long programme lengths and functional-safety work favour an embedded/VLSI services partner.,High,68.07,Prioritize
+HPC,HPC / AI accelerator ASICs,Custom ASIC design,1.2,Largest prize and the hardest entry; hyperscaler in-house teams absorb most of the work.,Moderate,64.12,Prioritize
+MEM,Memory (DRAM / NAND),Captive IDM design,1.9,Headline TAM leader and the clearest trap: design stays captive inside three IDMs.,Low,6.88,Deprioritize
+MEMS,MEMS & sensors,Mixed-signal & sensor design,0.7,Easy to enter and easy to leave; short engagements make revenue hard to forecast.,High,40.52,Deprioritize
+PHOT,Silicon photonics / optical interconnect,Photonic IC & packaging design,0.9,"Fastest compounding market in the set, but the thinnest talent pool in India.",High,56.58,Selective
+PWR,Power electronics (SiC / GaN),Device & module design,0.8,Growth is real; the margin pool crowds once announced SiC capacity converts to supply.,High,48.86,Selective
+RF5G,RF & 5G front-end,RF IC design,1.0,Mature handset demand; incremental infrastructure and satellite work only.,Moderate,32.89,Deprioritize

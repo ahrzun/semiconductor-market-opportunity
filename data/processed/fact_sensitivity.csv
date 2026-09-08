@@ -1,0 +1,321 @@
+segment_id,year,profile,profile_label,opportunity_score,rank_in_year,base_rank,rank_shift,is_base_profile
+ANLG,2021,base,Base (house view),70.6857,1,1,0,1
+AUTO,2021,base,Base (house view),68.097,2,2,0,1
+HPC,2021,base,Base (house view),56.4211,3,3,0,1
+PWR,2021,base,Base (house view),54.7018,4,4,0,1
+PHOT,2021,base,Base (house view),50.9989,5,5,0,1
+MEMS,2021,base,Base (house view),40.4893,6,6,0,1
+RF5G,2021,base,Base (house view),37.5531,7,7,0,1
+MEM,2021,base,Base (house view),8.9768,8,8,0,1
+ANLG,2022,base,Base (house view),70.6946,1,1,0,1
+AUTO,2022,base,Base (house view),67.7247,2,2,0,1
+HPC,2022,base,Base (house view),57.0386,3,3,0,1
+PWR,2022,base,Base (house view),53.8585,4,4,0,1
+PHOT,2022,base,Base (house view),52.5735,5,5,0,1
+MEMS,2022,base,Base (house view),41.9488,6,6,0,1
+RF5G,2022,base,Base (house view),36.1175,7,7,0,1
+MEM,2022,base,Base (house view),8.4199,8,8,0,1
+ANLG,2023,base,Base (house view),71.871,1,1,0,1
+AUTO,2023,base,Base (house view),68.8276,2,2,0,1
+HPC,2023,base,Base (house view),59.2185,3,3,0,1
+PWR,2023,base,Base (house view),55.2782,4,4,0,1
+PHOT,2023,base,Base (house view),52.8,5,5,0,1
+MEMS,2023,base,Base (house view),42.2792,6,6,0,1
+RF5G,2023,base,Base (house view),36.3093,7,7,0,1
+MEM,2023,base,Base (house view),8.6713,8,8,0,1
+ANLG,2024,base,Base (house view),71.8769,1,1,0,1
+AUTO,2024,base,Base (house view),70.0082,2,2,0,1
+HPC,2024,base,Base (house view),62.1723,3,3,0,1
+PWR,2024,base,Base (house view),56.1232,4,4,0,1
+PHOT,2024,base,Base (house view),54.193,5,5,0,1
+MEMS,2024,base,Base (house view),41.5495,6,6,0,1
+RF5G,2024,base,Base (house view),36.1738,7,7,0,1
+MEM,2024,base,Base (house view),8.8752,8,8,0,1
+ANLG,2025,base,Base (house view),72.268,1,1,0,1
+AUTO,2025,base,Base (house view),70.0803,2,2,0,1
+HPC,2025,base,Base (house view),64.0301,3,3,0,1
+PWR,2025,base,Base (house view),54.1985,4,4,0,1
+PHOT,2025,base,Base (house view),52.7675,5,5,0,1
+MEMS,2025,base,Base (house view),40.9824,6,6,0,1
+RF5G,2025,base,Base (house view),34.6377,7,7,0,1
+MEM,2025,base,Base (house view),9.1761,8,8,0,1
+AUTO,2026,base,Base (house view),71.9792,1,1,0,1
+ANLG,2026,base,Base (house view),71.8205,2,2,0,1
+HPC,2026,base,Base (house view),65.4848,3,3,0,1
+PWR,2026,base,Base (house view),55.6834,4,4,0,1
+PHOT,2026,base,Base (house view),54.6561,5,5,0,1
+MEMS,2026,base,Base (house view),41.3559,6,6,0,1
+RF5G,2026,base,Base (house view),34.3736,7,7,0,1
+MEM,2026,base,Base (house view),8.4021,8,8,0,1
+ANLG,2027,base,Base (house view),69.5205,1,1,0,1
+AUTO,2027,base,Base (house view),68.4906,2,2,0,1
+HPC,2027,base,Base (house view),64.9869,3,3,0,1
+PWR,2027,base,Base (house view),55.9429,4,4,0,1
+PHOT,2027,base,Base (house view),55.244,5,5,0,1
+MEMS,2027,base,Base (house view),40.4249,6,6,0,1
+RF5G,2027,base,Base (house view),33.2179,7,7,0,1
+MEM,2027,base,Base (house view),7.4529,8,8,0,1
+AUTO,2028,base,Base (house view),67.6954,1,1,0,1
+ANLG,2028,base,Base (house view),67.0505,2,2,0,1
+HPC,2028,base,Base (house view),64.3753,3,3,0,1
+PHOT,2028,base,Base (house view),57.3577,4,4,0,1
+PWR,2028,base,Base (house view),49.7422,5,5,0,1
+MEMS,2028,base,Base (house view),40.9432,6,6,0,1
+RF5G,2028,base,Base (house view),33.4107,7,7,0,1
+MEM,2028,base,Base (house view),7.0888,8,8,0,1
+AUTO,2029,base,Base (house view),66.904,1,1,0,1
+ANLG,2029,base,Base (house view),64.7726,2,2,0,1
+HPC,2029,base,Base (house view),62.7381,3,3,0,1
+PHOT,2029,base,Base (house view),57.5957,4,4,0,1
+PWR,2029,base,Base (house view),42.9264,5,5,0,1
+MEMS,2029,base,Base (house view),40.1553,6,6,0,1
+RF5G,2029,base,Base (house view),32.195,7,7,0,1
+MEM,2029,base,Base (house view),5.3122,8,8,0,1
+AUTO,2030,base,Base (house view),65.2939,1,1,0,1
+HPC,2030,base,Base (house view),63.0035,2,2,0,1
+ANLG,2030,base,Base (house view),62.9856,3,3,0,1
+PHOT,2030,base,Base (house view),58.0383,4,4,0,1
+PWR,2030,base,Base (house view),39.9988,5,5,0,1
+MEMS,2030,base,Base (house view),39.709,6,6,0,1
+RF5G,2030,base,Base (house view),31.2291,7,7,0,1
+MEM,2030,base,Base (house view),6.1538,8,8,0,1
+ANLG,2021,feasibility_weighted,Feasibility-weighted,78.1857,1,1,0,0
+AUTO,2021,feasibility_weighted,Feasibility-weighted,74.0216,2,2,0,0
+PWR,2021,feasibility_weighted,Feasibility-weighted,64.8708,3,4,1,0
+MEMS,2021,feasibility_weighted,Feasibility-weighted,56.7503,4,6,2,0
+PHOT,2021,feasibility_weighted,Feasibility-weighted,51.0413,5,5,0,0
+HPC,2021,feasibility_weighted,Feasibility-weighted,48.7676,6,3,-3,0
+RF5G,2021,feasibility_weighted,Feasibility-weighted,45.2971,7,7,0,0
+MEM,2021,feasibility_weighted,Feasibility-weighted,5.5996,8,8,0,0
+ANLG,2022,feasibility_weighted,Feasibility-weighted,78.247,1,1,0,0
+AUTO,2022,feasibility_weighted,Feasibility-weighted,72.6156,2,2,0,0
+PWR,2022,feasibility_weighted,Feasibility-weighted,62.4835,3,4,1,0
+MEMS,2022,feasibility_weighted,Feasibility-weighted,57.3318,4,6,2,0
+PHOT,2022,feasibility_weighted,Feasibility-weighted,52.9048,5,5,0,0
+HPC,2022,feasibility_weighted,Feasibility-weighted,47.1457,6,3,-3,0
+RF5G,2022,feasibility_weighted,Feasibility-weighted,43.678,7,7,0,0
+MEM,2022,feasibility_weighted,Feasibility-weighted,4.886,8,8,0,0
+ANLG,2023,feasibility_weighted,Feasibility-weighted,79.9669,1,1,0,0
+AUTO,2023,feasibility_weighted,Feasibility-weighted,74.6582,2,2,0,0
+PWR,2023,feasibility_weighted,Feasibility-weighted,64.9457,3,4,1,0
+MEMS,2023,feasibility_weighted,Feasibility-weighted,59.4737,4,6,2,0
+PHOT,2023,feasibility_weighted,Feasibility-weighted,53.9418,5,5,0,0
+HPC,2023,feasibility_weighted,Feasibility-weighted,49.8425,6,3,-3,0
+RF5G,2023,feasibility_weighted,Feasibility-weighted,45.5511,7,7,0,0
+MEM,2023,feasibility_weighted,Feasibility-weighted,6.0064,8,8,0,0
+ANLG,2024,feasibility_weighted,Feasibility-weighted,79.8534,1,1,0,0
+AUTO,2024,feasibility_weighted,Feasibility-weighted,74.4476,2,2,0,0
+PWR,2024,feasibility_weighted,Feasibility-weighted,65.2768,3,4,1,0
+MEMS,2024,feasibility_weighted,Feasibility-weighted,58.4128,4,6,2,0
+PHOT,2024,feasibility_weighted,Feasibility-weighted,53.8641,5,5,0,0
+HPC,2024,feasibility_weighted,Feasibility-weighted,50.7748,6,3,-3,0
+RF5G,2024,feasibility_weighted,Feasibility-weighted,44.4011,7,7,0,0
+MEM,2024,feasibility_weighted,Feasibility-weighted,5.9258,8,8,0,0
+ANLG,2025,feasibility_weighted,Feasibility-weighted,80.4641,1,1,0,0
+AUTO,2025,feasibility_weighted,Feasibility-weighted,74.1226,2,2,0,0
+PWR,2025,feasibility_weighted,Feasibility-weighted,60.7162,3,4,1,0
+MEMS,2025,feasibility_weighted,Feasibility-weighted,57.4533,4,6,2,0
+PHOT,2025,feasibility_weighted,Feasibility-weighted,52.6468,5,5,0,0
+HPC,2025,feasibility_weighted,Feasibility-weighted,50.4779,6,3,-3,0
+RF5G,2025,feasibility_weighted,Feasibility-weighted,42.7526,7,7,0,0
+MEM,2025,feasibility_weighted,Feasibility-weighted,6.3798,8,8,0,0
+ANLG,2026,feasibility_weighted,Feasibility-weighted,80.6851,1,2,1,0
+AUTO,2026,feasibility_weighted,Feasibility-weighted,76.7229,2,1,-1,0
+PWR,2026,feasibility_weighted,Feasibility-weighted,62.3963,3,4,1,0
+MEMS,2026,feasibility_weighted,Feasibility-weighted,58.1315,4,6,2,0
+PHOT,2026,feasibility_weighted,Feasibility-weighted,54.6145,5,5,0,0
+HPC,2026,feasibility_weighted,Feasibility-weighted,51.6334,6,3,-3,0
+RF5G,2026,feasibility_weighted,Feasibility-weighted,43.2883,7,7,0,0
+MEM,2026,feasibility_weighted,Feasibility-weighted,5.6985,8,8,0,0
+ANLG,2027,feasibility_weighted,Feasibility-weighted,79.8146,1,1,0,0
+AUTO,2027,feasibility_weighted,Feasibility-weighted,74.2,2,2,0,0
+PWR,2027,feasibility_weighted,Feasibility-weighted,64.1007,3,4,1,0
+MEMS,2027,feasibility_weighted,Feasibility-weighted,57.9203,4,6,2,0
+PHOT,2027,feasibility_weighted,Feasibility-weighted,56.3441,5,5,0,0
+HPC,2027,feasibility_weighted,Feasibility-weighted,50.8322,6,3,-3,0
+RF5G,2027,feasibility_weighted,Feasibility-weighted,41.9667,7,7,0,0
+MEM,2027,feasibility_weighted,Feasibility-weighted,5.4912,8,8,0,0
+ANLG,2028,feasibility_weighted,Feasibility-weighted,78.6065,1,2,1,0
+AUTO,2028,feasibility_weighted,Feasibility-weighted,74.9808,2,1,-1,0
+MEMS,2028,feasibility_weighted,Feasibility-weighted,58.5934,3,6,3,0
+PHOT,2028,feasibility_weighted,Feasibility-weighted,58.4777,4,4,0,0
+PWR,2028,feasibility_weighted,Feasibility-weighted,56.0535,5,5,0,0
+HPC,2028,feasibility_weighted,Feasibility-weighted,50.7483,6,3,-3,0
+RF5G,2028,feasibility_weighted,Feasibility-weighted,43.0908,7,7,0,0
+MEM,2028,feasibility_weighted,Feasibility-weighted,5.671,8,8,0,0
+ANLG,2029,feasibility_weighted,Feasibility-weighted,77.4517,1,2,1,0
+AUTO,2029,feasibility_weighted,Feasibility-weighted,75.2651,2,1,-1,0
+PHOT,2029,feasibility_weighted,Feasibility-weighted,59.6973,3,4,1,0
+MEMS,2029,feasibility_weighted,Feasibility-weighted,58.6789,4,6,2,0
+PWR,2029,feasibility_weighted,Feasibility-weighted,48.9637,5,5,0,0
+HPC,2029,feasibility_weighted,Feasibility-weighted,48.8408,6,3,-3,0
+RF5G,2029,feasibility_weighted,Feasibility-weighted,42.3374,7,7,0,0
+MEM,2029,feasibility_weighted,Feasibility-weighted,3.9223,8,8,0,0
+ANLG,2030,feasibility_weighted,Feasibility-weighted,76.5371,1,3,2,0
+AUTO,2030,feasibility_weighted,Feasibility-weighted,72.341,2,1,-1,0
+PHOT,2030,feasibility_weighted,Feasibility-weighted,58.7529,3,4,1,0
+MEMS,2030,feasibility_weighted,Feasibility-weighted,57.0038,4,6,2,0
+HPC,2030,feasibility_weighted,Feasibility-weighted,48.8401,5,2,-3,0
+PWR,2030,feasibility_weighted,Feasibility-weighted,45.2494,6,5,-1,0
+RF5G,2030,feasibility_weighted,Feasibility-weighted,41.184,7,7,0,0
+MEM,2030,feasibility_weighted,Feasibility-weighted,5.6366,8,8,0,0
+ANLG,2021,fit_weighted,Fit-weighted,83.1857,1,1,0,0
+AUTO,2021,fit_weighted,Fit-weighted,79.8959,2,2,0,0
+PWR,2021,fit_weighted,Fit-weighted,57.9362,3,4,1,0
+HPC,2021,fit_weighted,Fit-weighted,57.5313,4,3,-1,0
+MEMS,2021,fit_weighted,Fit-weighted,50.0516,5,6,1,0
+RF5G,2021,fit_weighted,Fit-weighted,49.7867,6,7,1,0
+PHOT,2021,fit_weighted,Fit-weighted,44.3368,7,5,-2,0
+MEM,2021,fit_weighted,Fit-weighted,4.4885,8,8,0,0
+ANLG,2022,fit_weighted,Fit-weighted,83.1422,1,1,0,0
+AUTO,2022,fit_weighted,Fit-weighted,78.8778,2,2,0,0
+HPC,2022,fit_weighted,Fit-weighted,57.5629,3,3,0,0
+PWR,2022,fit_weighted,Fit-weighted,57.2966,4,4,0,0
+MEMS,2022,fit_weighted,Fit-weighted,53.0892,5,6,1,0
+RF5G,2022,fit_weighted,Fit-weighted,48.0942,6,7,1,0
+PHOT,2022,fit_weighted,Fit-weighted,46.7221,7,5,-2,0
+MEM,2022,fit_weighted,Fit-weighted,4.21,8,8,0,0
+ANLG,2023,fit_weighted,Fit-weighted,83.7752,1,1,0,0
+AUTO,2023,fit_weighted,Fit-weighted,79.9736,2,2,0,0
+HPC,2023,fit_weighted,Fit-weighted,60.1439,3,3,0,0
+PWR,2023,fit_weighted,Fit-weighted,58.4239,4,4,0,0
+MEMS,2023,fit_weighted,Fit-weighted,52.5006,5,6,1,0
+RF5G,2023,fit_weighted,Fit-weighted,48.1034,6,7,1,0
+PHOT,2023,fit_weighted,Fit-weighted,46.8118,7,5,-2,0
+MEM,2023,fit_weighted,Fit-weighted,4.3357,8,8,0,0
+ANLG,2024,fit_weighted,Fit-weighted,83.9004,1,1,0,0
+AUTO,2024,fit_weighted,Fit-weighted,81.2807,2,2,0,0
+HPC,2024,fit_weighted,Fit-weighted,61.9617,3,3,0,0
+PWR,2024,fit_weighted,Fit-weighted,58.8848,4,4,0,0
+MEMS,2024,fit_weighted,Fit-weighted,51.493,5,6,1,0
+PHOT,2024,fit_weighted,Fit-weighted,49.4274,6,5,-1,0
+RF5G,2024,fit_weighted,Fit-weighted,48.4777,7,7,0,0
+MEM,2024,fit_weighted,Fit-weighted,4.4375,8,8,0,0
+ANLG,2025,fit_weighted,Fit-weighted,84.0718,1,1,0,0
+AUTO,2025,fit_weighted,Fit-weighted,80.7857,2,2,0,0
+HPC,2025,fit_weighted,Fit-weighted,63.2788,3,3,0,0
+PWR,2025,fit_weighted,Fit-weighted,57.2917,4,4,0,0
+MEMS,2025,fit_weighted,Fit-weighted,51.0723,5,6,1,0
+PHOT,2025,fit_weighted,Fit-weighted,46.6881,6,5,-1,0
+RF5G,2025,fit_weighted,Fit-weighted,45.9508,7,7,0,0
+MEM,2025,fit_weighted,Fit-weighted,4.588,8,8,0,0
+ANLG,2026,fit_weighted,Fit-weighted,83.932,1,2,1,0
+AUTO,2026,fit_weighted,Fit-weighted,83.7522,2,1,-1,0
+HPC,2026,fit_weighted,Fit-weighted,63.5222,3,3,0,0
+PWR,2026,fit_weighted,Fit-weighted,58.2679,4,4,0,0
+MEMS,2026,fit_weighted,Fit-weighted,51.7782,5,6,1,0
+PHOT,2026,fit_weighted,Fit-weighted,49.4545,6,5,-1,0
+RF5G,2026,fit_weighted,Fit-weighted,46.6585,7,7,0,0
+MEM,2026,fit_weighted,Fit-weighted,4.201,8,8,0,0
+ANLG,2027,fit_weighted,Fit-weighted,82.8837,1,1,0,0
+AUTO,2027,fit_weighted,Fit-weighted,80.0984,2,2,0,0
+HPC,2027,fit_weighted,Fit-weighted,63.7851,3,3,0,0
+PWR,2027,fit_weighted,Fit-weighted,58.9833,4,4,0,0
+MEMS,2027,fit_weighted,Fit-weighted,50.745,5,6,1,0
+PHOT,2027,fit_weighted,Fit-weighted,48.8075,6,5,-1,0
+RF5G,2027,fit_weighted,Fit-weighted,45.2088,7,7,0,0
+MEM,2027,fit_weighted,Fit-weighted,3.7265,8,8,0,0
+ANLG,2028,fit_weighted,Fit-weighted,81.4672,1,2,1,0
+AUTO,2028,fit_weighted,Fit-weighted,79.7995,2,1,-1,0
+HPC,2028,fit_weighted,Fit-weighted,63.4601,3,3,0,0
+PWR,2028,fit_weighted,Fit-weighted,55.8855,4,5,1,0
+PHOT,2028,fit_weighted,Fit-weighted,52.9762,5,4,-1,0
+MEMS,2028,fit_weighted,Fit-weighted,51.5364,6,6,0,0
+RF5G,2028,fit_weighted,Fit-weighted,46.5261,7,7,0,0
+MEM,2028,fit_weighted,Fit-weighted,3.5444,8,8,0,0
+ANLG,2029,fit_weighted,Fit-weighted,80.2166,1,2,1,0
+AUTO,2029,fit_weighted,Fit-weighted,80.1277,2,1,-1,0
+HPC,2029,fit_weighted,Fit-weighted,61.4432,3,3,0,0
+PHOT,2029,fit_weighted,Fit-weighted,52.5518,4,4,0,0
+MEMS,2029,fit_weighted,Fit-weighted,50.9662,5,6,1,0
+PWR,2029,fit_weighted,Fit-weighted,50.2844,6,5,-1,0
+RF5G,2029,fit_weighted,Fit-weighted,45.1233,7,7,0,0
+MEM,2029,fit_weighted,Fit-weighted,2.6562,8,8,0,0
+AUTO,2030,fit_weighted,Fit-weighted,80.1035,1,1,0,0
+ANLG,2030,fit_weighted,Fit-weighted,79.0481,2,3,1,0
+HPC,2030,fit_weighted,Fit-weighted,63.059,3,2,-1,0
+PHOT,2030,fit_weighted,Fit-weighted,52.8482,4,4,0,0
+MEMS,2030,fit_weighted,Fit-weighted,50.6508,5,6,1,0
+PWR,2030,fit_weighted,Fit-weighted,50.479,6,5,-1,0
+RF5G,2030,fit_weighted,Fit-weighted,43.7909,7,7,0,0
+MEM,2030,fit_weighted,Fit-weighted,3.0768,8,8,0,0
+HPC,2021,growth_weighted,Growth-weighted,65.0129,1,3,2,0
+AUTO,2021,growth_weighted,Growth-weighted,58.3409,2,2,0,0
+ANLG,2021,growth_weighted,Growth-weighted,58.1857,3,1,-2,0
+PHOT,2021,growth_weighted,Growth-weighted,55.8553,4,5,1,0
+PWR,2021,growth_weighted,Growth-weighted,52.6675,5,4,-1,0
+MEMS,2021,growth_weighted,Growth-weighted,32.4479,6,6,0,0
+RF5G,2021,growth_weighted,Growth-weighted,31.4575,7,7,0,0
+MEM,2021,growth_weighted,Growth-weighted,10.9213,8,8,0,0
+HPC,2022,growth_weighted,Growth-weighted,65.235,1,3,2,0
+ANLG,2022,growth_weighted,Growth-weighted,58.1422,2,1,-1,0
+AUTO,2022,growth_weighted,Growth-weighted,58.0208,3,2,-1,0
+PHOT,2022,growth_weighted,Growth-weighted,57.2075,4,5,1,0
+PWR,2022,growth_weighted,Growth-weighted,51.9139,5,4,-1,0
+MEMS,2022,growth_weighted,Growth-weighted,33.4222,6,6,0,0
+RF5G,2022,growth_weighted,Growth-weighted,30.0551,7,7,0,0
+MEM,2022,growth_weighted,Growth-weighted,10.4676,8,8,0,0
+HPC,2023,growth_weighted,Growth-weighted,66.8014,1,3,2,0
+AUTO,2023,growth_weighted,Growth-weighted,58.9689,2,2,0,0
+ANLG,2023,growth_weighted,Growth-weighted,58.7752,3,1,-2,0
+PHOT,2023,growth_weighted,Growth-weighted,57.4506,4,5,1,0
+PWR,2023,growth_weighted,Growth-weighted,53.3391,5,4,-1,0
+MEMS,2023,growth_weighted,Growth-weighted,33.3667,6,6,0,0
+RF5G,2023,growth_weighted,Growth-weighted,29.8793,7,7,0,0
+MEM,2023,growth_weighted,Growth-weighted,10.0932,8,8,0,0
+HPC,2024,growth_weighted,Growth-weighted,69.2388,1,3,2,0
+AUTO,2024,growth_weighted,Growth-weighted,59.8148,2,2,0,0
+ANLG,2024,growth_weighted,Growth-weighted,58.9004,3,1,-2,0
+PHOT,2024,growth_weighted,Growth-weighted,58.5193,4,5,1,0
+PWR,2024,growth_weighted,Growth-weighted,54.0748,5,4,-1,0
+MEMS,2024,growth_weighted,Growth-weighted,32.5867,6,6,0,0
+RF5G,2024,growth_weighted,Growth-weighted,29.527,7,7,0,0
+MEM,2024,growth_weighted,Growth-weighted,10.2523,8,8,0,0
+HPC,2025,growth_weighted,Growth-weighted,70.5366,1,3,2,0
+AUTO,2025,growth_weighted,Growth-weighted,60.0538,2,2,0,0
+ANLG,2025,growth_weighted,Growth-weighted,59.0718,3,1,-2,0
+PHOT,2025,growth_weighted,Growth-weighted,57.4039,4,5,1,0
+PWR,2025,growth_weighted,Growth-weighted,52.3666,5,4,-1,0
+MEMS,2025,growth_weighted,Growth-weighted,31.9891,6,6,0,0
+RF5G,2025,growth_weighted,Growth-weighted,28.0525,7,7,0,0
+MEM,2025,growth_weighted,Growth-weighted,10.2568,8,8,0,0
+HPC,2026,growth_weighted,Growth-weighted,71.627,1,3,2,0
+AUTO,2026,growth_weighted,Growth-weighted,61.5924,2,1,-1,0
+PHOT,2026,growth_weighted,Growth-weighted,59.0588,3,5,2,0
+ANLG,2026,growth_weighted,Growth-weighted,58.5696,4,2,-2,0
+PWR,2026,growth_weighted,Growth-weighted,53.7108,5,4,-1,0
+MEMS,2026,growth_weighted,Growth-weighted,32.3234,6,6,0,0
+RF5G,2026,growth_weighted,Growth-weighted,27.6126,7,7,0,0
+MEM,2026,growth_weighted,Growth-weighted,9.4839,8,8,0,0
+HPC,2027,growth_weighted,Growth-weighted,70.5148,1,3,2,0
+PHOT,2027,growth_weighted,Growth-weighted,59.9378,2,5,3,0
+AUTO,2027,growth_weighted,Growth-weighted,58.3277,3,2,-1,0
+ANLG,2027,growth_weighted,Growth-weighted,56.055,4,1,-3,0
+PWR,2027,growth_weighted,Growth-weighted,53.9436,5,4,-1,0
+MEMS,2027,growth_weighted,Growth-weighted,31.4742,6,6,0,0
+RF5G,2027,growth_weighted,Growth-weighted,26.2825,7,7,0,0
+MEM,2027,growth_weighted,Growth-weighted,8.2373,8,8,0,0
+HPC,2028,growth_weighted,Growth-weighted,69.3657,1,3,2,0
+PHOT,2028,growth_weighted,Growth-weighted,61.5206,2,4,2,0
+AUTO,2028,growth_weighted,Growth-weighted,57.2693,3,1,-2,0
+ANLG,2028,growth_weighted,Growth-weighted,53.4809,4,2,-2,0
+PWR,2028,growth_weighted,Growth-weighted,48.2976,5,5,0,0
+MEMS,2028,growth_weighted,Growth-weighted,31.5223,6,6,0,0
+RF5G,2028,growth_weighted,Growth-weighted,25.9285,7,7,0,0
+MEM,2028,growth_weighted,Growth-weighted,7.5169,8,8,0,0
+HPC,2029,growth_weighted,Growth-weighted,67.3404,1,3,2,0
+PHOT,2029,growth_weighted,Growth-weighted,61.9075,2,4,2,0
+AUTO,2029,growth_weighted,Growth-weighted,56.2983,3,1,-2,0
+ANLG,2029,growth_weighted,Growth-weighted,51.1551,4,2,-2,0
+PWR,2029,growth_weighted,Growth-weighted,42.1695,5,5,0,0
+MEMS,2029,growth_weighted,Growth-weighted,30.671,6,6,0,0
+RF5G,2029,growth_weighted,Growth-weighted,24.7729,7,7,0,0
+MEM,2029,growth_weighted,Growth-weighted,5.9827,8,8,0,0
+HPC,2030,growth_weighted,Growth-weighted,66.4986,1,2,1,0
+PHOT,2030,growth_weighted,Growth-weighted,62.3267,2,4,2,0
+AUTO,2030,growth_weighted,Growth-weighted,54.5724,3,1,-2,0
+ANLG,2030,growth_weighted,Growth-weighted,49.3422,4,3,-1,0
+PWR,2030,growth_weighted,Growth-weighted,38.4904,5,5,0,0
+MEMS,2030,growth_weighted,Growth-weighted,30.0929,6,6,0,0
+RF5G,2030,growth_weighted,Growth-weighted,23.5243,7,7,0,0
+MEM,2030,growth_weighted,Growth-weighted,5.985,8,8,0,0
